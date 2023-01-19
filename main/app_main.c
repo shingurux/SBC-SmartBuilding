@@ -155,12 +155,12 @@ static const char *TAG3 = "Sending sendMessage";
 
 
 /*Telegram configuration*/
-#define TOKEN "5946979126:AAHQwPyuuIWFiHfURenF8xlnqlDHaseSHxk"
+#define TOKEN "yourTelegramToken"
 char url_string[512] = "https://api.telegram.org/bot";
 // Using in the task strcat(url_string,TOKEN)); the main direct from the url will be in url_string
 //The chat id that will receive the message
-#define chat_ID1 "-648456728" //group
-#define chat_ID2 "5939864152"
+#define chat_ID1 "yourGroupID" //group
+#define chat_ID2 "yourID"
 
 extern const char telegram_certificate_pem_start[] asm("_binary_telegram_certificate_pem_start");
 extern const char telegram_certificate_pem_end[]   asm("_binary_telegram_certificate_pem_end");
@@ -483,7 +483,7 @@ static void mqtt_app_start(void)
         .uri = "mqtt://demo.thingsboard.io",
         .event_handle = mqtt_event_handler,
         .port = 1883,
-        .username = "DJM1fP0vY0gCMZYLm467", //token
+        .username = "yourThingsBoardToken", //token
     };
 
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
